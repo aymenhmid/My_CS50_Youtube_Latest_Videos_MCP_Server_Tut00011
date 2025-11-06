@@ -102,26 +102,16 @@ Restart the terminal after setting a User-level environment variable.
 - Build (without tests):
 
 ```powershell
-./mvnw.cmd -q -DskipTests package
+mvn clean install
 ```
 
 - Run (dev mode):
 
 ```powershell
-./mvnw.cmd spring-boot:run
+mvn spring-boot:run
 ```
 
-- Or run the built jar:
 
-```powershell
-java -jar target/mcp_server_tutorial-0.0.1-SNAPSHOT.jar
-```
-
-- Run tests:
-
-```powershell
-./mvnw.cmd test
-```
 
 Server will listen at `http://localhost:9999/`.
 
@@ -143,6 +133,10 @@ You can interactively explore and invoke MCP tools using MCP Inspector.
 #### Option B: Web/CLI variants
 If you use a CLI or web-based Inspector variant that supports HTTP MCP:
 - Start the server locally (see Run above).
+  '''powershell
+  npx @modelcontextprotocol/inspector
+  '''
+  and the mcp inspector will open in browser
 - Add a server with:
   - Transport: `http`
   - URL: `http://localhost:9999/`
