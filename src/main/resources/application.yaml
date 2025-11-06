@@ -1,0 +1,15 @@
+spring:
+  ai:
+    mcp:
+      server:
+        name: mcp-server-tutorial
+        version: 0.0.1
+        protocol: streamable
+        annotation-scanner:
+          enabled: true
+server:
+  port: 9999
+
+youtube:
+  api:
+    key: ${YOUTUBE_API_KEY}
