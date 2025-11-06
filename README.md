@@ -133,10 +133,10 @@ You can interactively explore and invoke MCP tools using MCP Inspector.
 #### Option B: Web/CLI variants
 If you use a CLI or web-based Inspector variant that supports HTTP MCP:
 - Start the server locally (see Run above).
-  '''powershell
+- run this command to launch mcpinspector in browser
+  '''
   npx @modelcontextprotocol/inspector
   '''
-  and the mcp inspector will open in browser
 - Add a server with:
   - Transport: `http`
   - URL: `http://localhost:9999/`
@@ -148,41 +148,7 @@ Troubleshooting tips:
 - Verify port `9999` is free or adjust `server.port` in `application.yaml`.
 - If Inspector cannot discover tools, confirm `annotation-scanner.enabled: true`.
 
-### Git Setup and Workflow
-Initialize Git (if not already):
 
-```powershell
-git init
-git branch -M main
-git remote add origin <YOUR_REMOTE_URL>
-```
-
-Basic ignore rules are provided in `.gitignore`.
-
-Set author info:
-
-```powershell
-git config user.name "Your Name"
-git config user.email "you@example.com"
-```
-
-Commit workflow:
-
-```powershell
-git add .
-git commit -m "feat: initial MCP server with CS50 videos tool"
-git push -u origin main
-```
-
-Create feature branches:
-
-```powershell
-git checkout -b feat/more-tools
-# ... make changes ...
-git add .
-git commit -m "feat: add new MCP tool"
-git push -u origin feat/more-tools
-```
 
 ### Inspector Tool Invocation Examples
 - `CS50 latest videos` with `limit = 3` should return the three most recent videos from the CS50 channel.
